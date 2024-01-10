@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Course from './components/courses.js'
+import './index.css'
 
 function App() {
+
+  const Details=[
+    {
+      Subject:'BE',
+      Duration:'4 yrs',
+      Fees:'50 lac',
+    },
+    {
+      Subject:'Bsc',
+      Duration:'3 yrs',
+      Fees:'10 lac'
+    },
+    {
+      Subject:'Bcom',
+      Duration:'3 yrs',
+      Fees:'10 lac'
+    },
+    ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Courses Provided</h1>
+      <Course {...Details[0]}></Course>
+            <Course {...Details[1]}></Course>
+            <Course {...Details[2]}></Course>
     </div>
   );
 }
